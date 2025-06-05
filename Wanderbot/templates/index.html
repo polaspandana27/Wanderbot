@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WanderBot Chatbot</title>
+</head>
+<body>
+    <h1>WanderBot</h1>
+    <input id="userInput" type="text" placeholder="Say something..." />
+    <button onclick="sendMessage()">Send</button>
+
+    <div id="chatbox"></div>
+
+    <script>
+        function sendMessage() {
+            let userText = document.getElementById("userInput").value;
+            if(userText === "") return;
+            // Show user message
+            let chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += "<b>You:</b> " + userText + "<br>";
+
+            fetch(`/get?msg=${encodeURIComponent(userText)}`)
+            .then(response => response.json())
+            .then(data => {
+                chatbox.innerHTML += "<b>WanderBot:</b> " + data.response + "<br>";
+                document.getElementById("userInput").value = "";
+            });
+        }
+    </script>
+</body>
+</html>

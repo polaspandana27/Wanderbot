@@ -1,0 +1,39 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning"],
+      "responses": ["Hello! How can I assist you with your travel plans today?"]
+    },
+    {
+      "tag": "tourist_places",
+      "patterns": ["Suggest some tourist places", "Where should I travel in India?", "Famous places to visit"],
+      "responses": ["You can visit Goa, Manali, Kerala, or Rajasthan!"]
+    },
+    {
+      "tag": "weather",
+      "patterns": ["What's the weather like in Paris?", "Weather in Delhi?"],
+      "responses": ["You can check the latest weather at www.weather.com."]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": ["Safe travels! Goodbye!"]
+    },
+    {
+      "tag": "hotel_booking",
+      "patterns": ["I want to book a hotel", "Find me a hotel", "Hotel recommendations", "Book accommodation"],
+      "responses": ["Sure! What city are you planning to stay in?", "How many guests will be staying?"]
+    },
+    {
+      "tag": "flight_info",
+      "patterns": ["Flight status", "When is my flight?", "Flight delay", "Flight booking"],
+      "responses": ["Please provide your flight number or route.", "I can help track your flight if you give me details."]
+    },
+    {
+      "tag": "help",
+      "patterns": ["Can you help me?", "I need assistance", "Support", "Help me out"],
+      "responses": ["I'm here to help! What do you need assistance with?", "Feel free to ask me anything about travel."]
+    }
+  ]
+}
